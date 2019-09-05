@@ -1,0 +1,111 @@
+{
+	"name": "python-live-coding",
+	"publisher": "CodeJunky",
+	"displayName": "Python Live Coding",
+	"description": "Live reload of modules, classes and functions",
+	"version": "1.1.4",
+	"engines": {
+		"vscode": "^1.36.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"*"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "pythonLiveCoding.execute",
+				"title": "Python Live Coding: Execute"
+			},
+			{
+				"command": "pythonLiveCoding.executeAll",
+				"title": "Python Live Coding: Execute All"
+			},
+			{
+				"command": "pythonLiveCoding.executeChunk",
+				"title": "Python Live Coding: Execute Chunk"
+			},
+			{
+				"command": "pythonLiveCoding.dispose",
+				"title": "Python Live Coding: Dispose Terminal"
+			}
+		],
+		"configuration": {
+			"title": "Python Live Coding",
+			"properties": {
+				"pythonLiveCoding.executeUntitled": {
+					"type": "boolean",
+					"default": true,
+					"description": "Whether to execute code in untitled documents as if they where in main script"
+				},
+				"pythonLiveCoding.executeNotImported": {
+					"type": "boolean",
+					"default": false,
+					"description": "Whether to execute code in modules that are not imported as if they where in main script"
+				},
+				"pythonLiveCoding.interpreterPath": {
+					"type": "string",
+					"default": "python3",
+					"description": "Path to the python interpreter to be used"
+				},
+				"pythonLiveCoding.reservedKeyword": {
+					"type": "string",
+					"default": "__python_live_coding_reserved_keyword",
+					"description": "Name of the keyword that will be reserved for use in the __main__ module"
+				}
+			}
+		},
+		"keybindings": [
+			{
+				"command": "pythonLiveCoding.execute",
+				"key": "ctrl+enter",
+				"mac": "cmd+enter",
+				"when": "editorTextFocus && editorLangId == python"
+			},
+			{
+				"command": "pythonLiveCoding.executeAll",
+				"key": "ctrl+shift+enter",
+				"mac": "cmd+shift+enter",
+				"when": "editorTextFocus && editorLangId == python"
+			},
+			{
+				"command": "pythonLiveCoding.executeChunk",
+				"key": "ctrl+alt+enter",
+				"mac": "cmd+alt+enter",
+				"when": "editorTextFocus && editorLangId == python"
+			},
+			{
+				"command": "pythonLiveCoding.dispose",
+				"key": "ctrl+alt+del",
+				"mac": "cmd+alt+enter",
+				"when": "editorTextFocus && editorLangId == python"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"gzip-python": "python src/gzip_load.py",
+		"pretest": "npm run compile",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.1.1",
+		"@types/mocha": "^5.2.6",
+		"@types/node": "^10.12.21",
+		"@types/vscode": "^1.36.0",
+		"glob": "^7.1.4",
+		"mocha": "^6.1.4",
+		"typescript": "^3.3.1",
+		"tslint": "^5.12.1",
+		"vscode-test": "^1.0.2"
+	},
+	"dependencies": {
+		"@types/lodash": "^4.14.137",
+		"lodash": "^4.17.15"
+	}
+}

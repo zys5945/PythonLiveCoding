@@ -200,7 +200,7 @@ export function activate(context: vscode.ExtensionContext) {
         }
     });
 
-    let executeChunck = vscode.commands.registerCommand(`${EXTENSION_PREFIX}.executeChunck`, () => {
+    let executeChunk = vscode.commands.registerCommand(`${EXTENSION_PREFIX}.executeChunk`, () => {
         try {
             let [editor, document, start, end, isMain] = prepareExecution();
             let statements = parse(document, start, end, InclusionMode.Chunk);
@@ -238,7 +238,7 @@ export function activate(context: vscode.ExtensionContext) {
 
     context.subscriptions.push(execute);
     context.subscriptions.push(executeAll);
-    context.subscriptions.push(executeChunck);
+    context.subscriptions.push(executeChunk);
     context.subscriptions.push(dispose);
 }
 

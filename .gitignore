@@ -6,3 +6,4 @@ note.txt
 .vscode/
 **/__pycache__/
 test/
+demo/

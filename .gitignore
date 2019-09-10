@@ -1,9 +1,9 @@
-out
-node_modules
-.vscode-test/
-*.vsix
-note.txt
 .vscode/
+.vscode-test/
+
+node_modules/
+
+*.vsix
+out/
+
 **/__pycache__/
-test/
-demo/

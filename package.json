@@ -1,8 +1,8 @@
 {
 	"name": "python-live-coding",
-	"publisher": "CodeJunky",
+	"publisher": "Code Junkie",
 	"displayName": "Python Live Coding",
-	"description": "Live reload of modules, classes and functions",
+	"description": "Enables live execution of python code",
 	"version": "1.1.4",
 	"engines": {
 		"vscode": "^1.36.0"

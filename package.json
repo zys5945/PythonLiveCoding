@@ -8,6 +8,10 @@
 	"engines": {
 		"vscode": "^1.36.0"
 	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/zys5945/PythonLiveCoding"
+	},
 	"categories": [
 		"Other"
 	],

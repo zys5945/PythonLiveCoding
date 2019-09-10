@@ -64,7 +64,7 @@ A demo can be found in gifs/chunk.gif
 
 Source code is parsed for the selected statements. Here a statement refers to a complete python statement that might span multiple lines, similar to that outlined in [the python grammar specification](https://docs.python.org/3/reference/grammar.html).
 
-It takes into consideration of things such as multiline string ''' and """, line continuation character \, or tokens such () [] {} that spans multiple lines.
+It takes into consideration of things such as multiline string ''' and """, line continuation character \\, or tokens such () [] {} that spans multiple lines.
 
 Selected source code is then passed into python interpreter, which executes the code against the correct globals, observes changes to the globals and reassign things if necessary.
 

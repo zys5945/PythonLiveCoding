@@ -1,9 +1,10 @@
 {
 	"name": "python-live-coding",
-	"publisher": "Code Junkie",
+	"publisher": "zys5945",
 	"displayName": "Python Live Coding",
 	"description": "Enables live execution of python code",
-	"version": "1.1.4",
+	"icon": "icon.png",
+	"version": "1.1.5",
 	"engines": {
 		"vscode": "^1.36.0"
 	},

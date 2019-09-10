@@ -8,7 +8,7 @@ Enables live reloading of classes, class members, or portions of code from other
 
 ## Commands
 
-You can find demos in gifs folder.
+You can find demos in the [repository](https://github.com/zys5945/PythonLiveCoding), under the gifs folder.
 
 They are left out of this readme because of their file size.
 

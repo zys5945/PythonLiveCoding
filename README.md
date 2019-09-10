@@ -66,7 +66,7 @@ Source code is parsed for the selected statements. Here a statement refers to a 
 
 It takes into consideration of things such as multiline string ''' and """, line continuation character \\, or tokens such () [] {} that spans multiple lines.
 
-Selected source code is then passed into python interpreter, which executes the code against the correct globals, observes changes to the globals and reassign things if necessary.
+Selected source code is then passed into the python interpreter, which executes the code against the correct globals, observes changes to the globals and reassigns things if necessary.
 
 ## Caveats
 

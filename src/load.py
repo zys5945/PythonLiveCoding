@@ -50,7 +50,11 @@ def load(code, parent_class_name=None, path=None, execute_not_imported=False):
 
                 for key in changed:
                     setattr(class_obj, key, changed[key])
-                    g[key] = gc[key]
+
+                    if gc.get(key) is not None:
+                        g[key] = gc[key]
+                    else:
+                        del g[key]
 
             except:
                 print(f'module {module_to_use.__name__} does not have class {parent_class_name}')

@@ -161,7 +161,11 @@ export function activate(context: vscode.ExtensionContext) {
                 let code = '';
 
                 for (let child of classParent.children) {
-                    if ((child.start.line >= start.line && child.start.line <= end.line) || (child.end.line >= start.line && child.end.line <= end.line)) {
+                    if (
+                        (child.start.line >= start.line && child.start.line <= end.line) ||
+                        (child.end.line >= start.line && child.end.line <= end.line) ||
+                        (child.start.line <= start.line && child.end.line >= end.line)
+                    ) {
                         code += unindent(document, child, indentSizePerLevel);
                         code += '\n\n';
                     }
